@@ -21,6 +21,18 @@ RSpec.describe FoodEnquete, type: :model do
 
         # テストデータを保存します。
         enquete.save
+
+        # [Point.3-3-4][Point.3-3-3]で保存したデータを取得します。
+        answered_enquete = FoodEnquete.find(1);
+
+        # [Point.3-3-5][Point.3-3-1]で作成したデータを同一か検証します。
+        expect(answered_enquete.name).to eq('かと')
+        expect(answered_enquete.mail).to eq('test@gmail.com')
+        expect(answered_enquete.age).to eq(22)
+        expect(answered_enquete.food_id).to eq(1)
+        expect(answered_enquete.score).to eq(2)
+        expect(answered_enquete.request).to eq('いいね')
+        expect(answered_enquete.present_id).to eq(1)
       end
     end
   end
