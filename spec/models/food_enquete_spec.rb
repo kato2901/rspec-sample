@@ -126,4 +126,3 @@ RSpec.describe FoodEnquete, type: :model do
   end
 
 end
-
